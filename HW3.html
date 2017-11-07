@@ -6,13 +6,12 @@
 		<title>First JavaScript</title>
 		<style type = "text/css">p{margin : 0}</style>
 		<script type = "text/javascript">
-			var c;
-			
 			do{
-				c = window.prompt("Please enter the ℃  temperture:");
-			}while(isNaN(c))
+				var c = window.prompt("Please enter the ℃  temperture:");
+				if(isNaN(c) == true) window.alert("please key in a number!");
+			}while(isNaN(c));
 			
-			document.writeln("<h1>" + c + " ℃" + " = " + change(c) + " ℉</h1>")
+			document.writeln("<h1>" + c + " ℃" + " = " + change(c) + " ℉</h1>");
 			
 			function change(x)
 			{
